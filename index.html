@@ -1,377 +1,271 @@
 <!DOCTYPE html>
 <html lang="te">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Calvary Ministries | Anantapur">
-<title>Calvary Ministries | Anantapur</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --gold:#d9ad55;
-  --gold2:#f3d18a;
-  --dark:#090909;
-  --dark2:#121212;
-  --cream:#fffaf0;
-  --muted:#b9b9b9;
-  --line:rgba(255,255,255,.12);
-  --max:1180px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:"Noto Sans Telugu",system-ui,sans-serif;background:var(--dark);color:#fff;line-height:1.7}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-
-.nav{
- position:fixed;inset:0 0 auto;z-index:100;
- background:rgba(5,5,5,.88);backdrop-filter:blur(14px);
- border-bottom:1px solid var(--line);
-}
-.nav-inner{max-width:var(--max);margin:auto;min-height:76px;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:700}
-.brand img{width:48px;height:48px;object-fit:contain;border-radius:50%}
-.brand-title{font-family:"Playfair Display",serif;font-size:18px}
-.brand-sub{display:block;color:var(--gold2);font-size:11px;letter-spacing:2px}
-.links{display:flex;gap:28px;align-items:center;font-size:14px}
-.links a{color:#eee;transition:.25s}
-.links a:hover{color:var(--gold2)}
-.menu{display:none;background:none;border:1px solid var(--line);color:#fff;padding:8px 11px;border-radius:8px;font-size:22px}
-
-.hero{
- min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
- background:
- linear-gradient(90deg,rgba(4,4,4,.92) 0%,rgba(4,4,4,.74) 38%,rgba(4,4,4,.35) 72%,rgba(4,4,4,.72) 100%),
- url("hero.jpg") center/cover no-repeat;
-}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#090909 0%,transparent 18%,transparent 78%,#090909 100%);pointer-events:none}
-.hero-content{position:relative;z-index:2;max-width:var(--max);width:100%;margin:auto;padding:140px 22px 90px}
-.eyebrow{color:var(--gold2);letter-spacing:3px;font-size:13px;font-weight:700;margin-bottom:16px}
-.hero h1{font-size:clamp(40px,6vw,78px);line-height:1.18;max-width:760px;font-weight:800;text-shadow:0 5px 30px #000}
-.hero h1 span{color:var(--gold2)}
-.hero p{margin-top:22px;max-width:650px;color:#eee;font-size:clamp(16px,2vw,20px)}
-.buttons{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:13px 22px;border-radius:999px;font-weight:700;border:1px solid var(--gold);transition:.25s;display:inline-flex;align-items:center;gap:8px}
-.btn.primary{background:var(--gold);color:#111}
-.btn.primary:hover{background:var(--gold2)}
-.btn.outline{background:rgba(0,0,0,.2);color:#fff}
-.btn.outline:hover{background:#fff;color:#111}
-
-section{padding:90px 22px}
-.container{max-width:var(--max);margin:auto}
-.section-label{color:var(--gold2);font-size:12px;letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.section-title{font-family:"Playfair Display",serif;font-size:clamp(32px,4vw,50px);margin-top:8px}
-.section-intro{color:var(--muted);max-width:700px;margin-top:12px}
-
-.about{background:var(--dark2)}
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
-.about-photo{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 20px 70px rgba(0,0,0,.4)}
-.about-photo img{width:100%;height:480px;object-fit:cover}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
-.card{padding:26px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.035)}
-.icon{font-size:28px;color:var(--gold2)}
-.card h3{margin:8px 0;font-size:19px}
-.card p{color:var(--muted);font-size:14px}
-
-.services{background:#0d0d0d}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}
-.service{position:relative;min-height:300px;border-radius:18px;overflow:hidden;border:1px solid var(--line)}
-.service img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.5s}
-.service:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.92),rgba(0,0,0,.08))}
-.service:hover img{transform:scale(1.05)}
-.service-text{position:absolute;z-index:2;left:22px;right:22px;bottom:20px}
-.service-text h3{font-family:"Playfair Display",serif;font-size:25px}
-.service-text p{color:#ddd;font-size:13px}
-
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}
-.gallery-grid a{overflow:hidden;border-radius:12px;border:1px solid var(--line);aspect-ratio:1}
-.gallery-grid img{width:100%;height:100%;object-fit:cover;transition:.4s}
-.gallery-grid a:hover img{transform:scale(1.08)}
-
-.contact{background:linear-gradient(135deg,#17130b,#0b0b0b)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.contact-box{padding:30px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035)}
-.contact-row{display:flex;gap:15px;margin:18px 0}
-.contact-row strong{display:block}
-.contact-row span{color:var(--muted);font-size:14px}
-.map{width:100%;height:350px;border:0;border-radius:18px}
-
-footer{padding:35px 22px;border-top:1px solid var(--line);background:#050505;color:var(--muted)}
-.footer-inner{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.gold{color:var(--gold2)}
-
-@media(max-width:800px){
-  html,body{width:100%;overflow-x:hidden}
-
-  .nav-inner{
-    min-height:72px;
-    padding:8px 16px;
-    gap:12px;
-  }
-  .brand{gap:9px;min-width:0}
-  .brand img{width:44px;height:44px}
-  .brand-title{
-    font-size:18px;
-    line-height:1.15;
-    white-space:nowrap;
-  }
-  .brand-sub{
-    font-size:10px;
-    letter-spacing:2.5px;
-    margin-top:2px;
-  }
-
-  .menu{
-    display:block;
-    flex:0 0 auto;
-    width:52px;
-    height:52px;
-    padding:0;
-    font-size:28px;
-    line-height:1;
-    border-radius:12px;
-    cursor:pointer;
-  }
-
-  .links{
-    display:none;
-    position:absolute;
-    top:72px;
-    left:0;
-    right:0;
-    background:rgba(8,8,8,.98);
-    padding:8px 18px 16px;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    border-bottom:1px solid var(--line);
-  }
-  .links.open{display:flex}
-  .links a{
-    padding:13px 4px;
-    font-size:16px;
-    border-bottom:1px solid rgba(255,255,255,.08);
-  }
-  .links a:last-child{border-bottom:0}
-
-  .hero{
-    min-height:760px;
-    height:auto;
-    align-items:flex-start;
-    background-position:68% center;
-    background-size:auto 100%;
-  }
-  .hero:after{
-    background:
-      linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.42) 35%,rgba(0,0,0,.68) 72%,#090909 100%);
-  }
-  .hero-content{
-    width:100%;
-    max-width:100%;
-    padding:128px 20px 70px;
-  }
-  .eyebrow{
-    font-size:12px;
-    line-height:1.6;
-    letter-spacing:1.5px;
-    margin-bottom:12px;
-  }
-  .hero h1{
-    max-width:100%;
-    font-size:clamp(38px,11vw,52px);
-    line-height:1.15;
-    letter-spacing:-.5px;
-  }
-  .hero p{
-    max-width:100%;
-    margin-top:20px;
-    font-size:17px;
-    line-height:1.75;
-    text-shadow:0 2px 12px rgba(0,0,0,.9);
-  }
-  .buttons{
-    margin-top:25px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:12px;
-  }
-  .btn{
-    min-height:54px;
-    padding:14px 24px;
-    font-size:16px;
-    justify-content:center;
-  }
-  .hero .btn{
-    width:auto;
-    min-width:230px;
-  }
-
-  section{padding:65px 18px}
-  .section-title{font-size:34px;line-height:1.2}
-  .section-intro{font-size:15px;line-height:1.75}
-
-  .about-grid,.contact-grid{grid-template-columns:1fr;gap:28px}
-  .cards,.service-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:repeat(2,1fr);gap:9px}
-  .about-photo img{height:300px}
-
-  .service{min-height:280px}
-  .service-text{left:18px;right:18px;bottom:17px}
-
-  .map{height:300px}
-  .contact-box{padding:22px}
-  .footer-inner{font-size:13px;line-height:1.7}
-}
-
-@media(max-width:380px){
-  .brand-title{font-size:16px}
-  .brand-sub{font-size:9px}
-  .hero{min-height:720px}
-  .hero-content{padding-left:16px;padding-right:16px}
-  .hero h1{font-size:36px}
-  .hero p{font-size:16px}
-  .hero .btn{min-width:210px}
-}
-</style>
-
-<style>
-@media (max-width:768px){
-html,body{width:100%;max-width:100%;overflow-x:hidden}
-.nav{height:68px}.nav-inner{min-height:68px;padding:7px 14px}.brand{gap:8px}
-.brand img{width:42px;height:42px}.brand-title{font-size:16px;line-height:1.1}.brand-sub{font-size:8px;letter-spacing:1.8px}
-.menu{display:block;width:44px;height:44px;padding:0;font-size:24px;border-radius:10px}
-.links{top:68px;max-height:calc(100vh - 68px);overflow:auto}
-.hero{min-height:0!important;height:auto!important;padding:68px 18px 34px!important;align-items:flex-end!important;background-position:center center!important;background-size:cover!important}
-.hero:after{background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.32) 30%,rgba(0,0,0,.78) 67%,#090909 100%)!important}
-.hero-content{min-height:calc(100svh - 68px);display:flex;flex-direction:column;justify-content:flex-end;padding:0 4px 12px!important}
-.eyebrow{font-size:11px!important;letter-spacing:1px!important;margin-bottom:8px!important}
-.hero h1{font-size:clamp(34px,10vw,46px)!important;line-height:1.12!important;max-width:330px!important;margin:0!important}
-.hero p{font-size:15px!important;line-height:1.65!important;max-width:330px!important;margin-top:12px!important}
-.hero .buttons{margin-top:18px!important;width:100%!important;gap:10px!important;align-items:stretch!important}
-.hero .btn{width:100%!important;max-width:330px!important;min-width:0!important;min-height:48px!important;padding:11px 16px!important;font-size:14px!important}
-section{padding:54px 17px!important}.section-label{font-size:10px!important;letter-spacing:2px!important}
-.section-title{font-size:30px!important;line-height:1.2!important}.section-intro{font-size:14px!important;line-height:1.7!important}
-.about-grid,.contact-grid{grid-template-columns:1fr!important;gap:24px!important}
-.cards,.service-grid{grid-template-columns:1fr!important;gap:12px!important}.card{padding:20px!important}
-.about-photo img{height:260px!important}.service{min-height:245px!important}
-.gallery-grid{grid-template-columns:repeat(2,1fr)!important;gap:7px!important}.map{height:270px!important}
-.contact-box{padding:20px!important}footer{padding:25px 17px!important}.footer-inner{font-size:12px!important}
-}
-@media (max-width:380px){.hero h1{font-size:32px!important}.hero p{font-size:14px!important}.hero .btn{max-width:100%!important}}
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>కల్వరి మినిస్ట్రీస్ - Calvary Ministries, Anantapur</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Font: Noto Sans Telugu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans Telugu', sans-serif;
+    }
+  </style>
 </head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-white">
 
-<body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#home">
-      <img src="calvary-4u.png" alt="Calvary Ministries">
-      <div><span class="brand-title">Calvary Ministries</span><span class="brand-sub">ANANTAPUR</span></div>
-    </a>
-    <button class="menu" aria-label="Open menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-    <nav class="links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <span class="text-2xl sm:text-3xl text-amber-500 font-serif">✝</span>
+          <div class="leading-tight">
+            <span class="block text-base sm:text-lg font-bold tracking-wide text-white">కల్వరి మినిస్ట్రీస్</span>
+            <span class="block text-xs text-slate-400 font-sans tracking-wider uppercase">Calvary Ministries</span>
+          </div>
+        </a>
 
-<main>
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="eyebrow">కల్వరి మినిస్ట్రీస్ • అనంతపురం</div>
-    <h1>యేసుక్రీస్తు <span>మన నిరీక్షణ</span></h1>
-    <p>ఆయనలో ప్రేమ, సమాధానం, పరివర్తన మరియు నూతన జీవితం ఉంది. దేవుని సన్నిధిలో కలిసి ఆరాధిద్దాం.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#contact">మమ్మల్ని సందర్శించండి</a>
-      <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Calvary+Ministries+Anantapur" target="_blank" rel="noopener">Get Directions</a>
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+          <a href="#about" class="hover:text-amber-400 transition">పరిచయం</a>
+          <a href="#services" class="hover:text-amber-400 transition">ఆరాధన సమయాలు</a>
+          <a href="#gallery" class="hover:text-amber-400 transition">ఫోటో గ్యాలరీ</a>
+          <a href="#sermons" class="hover:text-amber-400 transition">సందేశాలు</a>
+          <a href="#location" class="hover:text-amber-400 transition">చిరునామా</a>
+          <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl transition shadow-sm">ప్రార్థన అభ్యర్థన</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg hover:bg-slate-800 text-slate-300 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 py-4 space-y-3 px-2 text-base font-medium text-slate-300">
+        <a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">పరిచయం</a>
+        <a href="#services" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">ఆరాధన సమయాలు</a>
+        <a href="#gallery" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">ఫోటో గ్యాలరీ</a>
+        <a href="#sermons" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">సందేశాలు</a>
+        <a href="#location" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">చిరునామా</a>
+        <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="block text-center bg-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-xl shadow mt-2">ప్రార్థన అభ్యర్థన (WhatsApp)</a>
+      </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="about" id="about">
- <div class="container about-grid">
-  <div>
-   <div class="section-label">About Us</div>
-   <h2 class="section-title">A place to worship, grow & serve.</h2>
-   <p class="section-intro">Calvary Ministries is a Christ-centered community in Anantapur committed to worship, prayer, biblical teaching and serving people with the love of Jesus.</p>
-   <div class="cards">
-    <div class="card"><div class="icon">✝</div><h3>Faith</h3><p>Building our lives on the Word of God.</p></div>
-    <div class="card"><div class="icon">♡</div><h3>Love</h3><p>Sharing Christ's love with every family.</p></div>
-    <div class="card"><div class="icon">☼</div><h3>Hope</h3><p>Helping people discover hope in Jesus.</p></div>
-   </div>
-  </div>
-  <div class="about-photo"><img src="worship-1.jpg" alt="Worship at Calvary Ministries"></div>
- </div>
-</section>
+  <!-- Hero Section -->
+  <section class="relative bg-slate-950 text-white py-16 sm:py-24 px-4 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
+        <span>ప్రభువైన యేసుక్రీస్తు నామములో మీకు హృదయపూర్వక స్వాగతం</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+        కల్వరి మినిస్ట్రీస్, అనంతపురం
+      </h1>
+      <p class="text-slate-300 text-base sm:text-xl font-medium mb-6">
+        దైవజనులు: <span class="text-amber-400 font-semibold">ఎం. డానియల్ వెంకట్‌రెడ్డి</span> (M. Daniel Venkatreddy)
+      </p>
 
-<section class="services" id="services">
- <div class="container">
-  <div class="section-label">Our Services</div>
-  <h2 class="section-title">Come and worship with us.</h2>
-  <p class="section-intro">Everyone is welcome. Join us for worship, prayer, teaching and fellowship.</p>
-  <div class="service-grid">
-   <article class="service"><img src="service-1.jpg" alt="Sunday Worship"><div class="service-text"><h3>Sunday Worship</h3><p>Join our Sunday worship service and experience God's presence.</p></div></article>
-   <article class="service"><img src="service-2.jpg" alt="Prayer Service"><div class="service-text"><h3>Prayer & Fellowship</h3><p>A time to pray together and encourage one another.</p></div></article>
-   <article class="service"><img src="service-3.jpg" alt="Bible Teaching"><div class="service-text"><h3>Word & Teaching</h3><p>Grow deeper through biblical teaching and discipleship.</p></div></article>
-  </div>
- </div>
-</section>
+      <blockquote class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8 italic bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
+        "ప్రయాసపడి భారము మోసికొనుచున్న సమస్త జనులారా, నాయొద్దకు రండి; నేను మీకు విశ్రాంతి కలుగజేతును." — మత్తయి 11:28
+      </blockquote>
 
-<section id="gallery">
- <div class="container">
-  <div class="section-label">Gallery</div>
-  <h2 class="section-title">Moments from our ministry.</h2>
-  <p class="section-intro">A glimpse of worship, services and ministry life at Calvary Ministries.</p>
-  <div class="gallery-grid">
-   <a href="event-1.jpg" target="_blank"><img src="event-1.jpg" alt="Ministry event"></a>
-   <a href="event-2.jpg" target="_blank"><img src="event-2.jpg" alt="Ministry event"></a>
-   <a href="event-3.jpg" target="_blank"><img src="event-3.jpg" alt="Ministry event"></a>
-   <a href="worship-1.jpg" target="_blank"><img src="worship-1.jpg" alt="Worship"></a>
-   <a href="service-1.jpg" target="_blank"><img src="service-1.jpg" alt="Service"></a>
-   <a href="service-2.jpg" target="_blank"><img src="service-2.jpg" alt="Service"></a>
-   <a href="service-3.jpg" target="_blank"><img src="service-3.jpg" alt="Service"></a>
-   <a href="calvary-4u.png" target="_blank"><img src="calvary-4u.png" alt="Calvary Ministries"></a>
-  </div>
- </div>
-</section>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#services" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg text-center flex items-center justify-center gap-2">
+          <i data-lucide="clock" class="w-5 h-5"></i> ఆరాధన సమయం
+        </a>
+        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl border border-red-500 transition text-center flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="youtube" class="w-5 h-5"></i> యూట్యూబ్ ఛానల్
+        </a>
+      </div>
+    </div>
+  </section>
 
-<section class="contact" id="contact">
- <div class="container contact-grid">
-  <div>
-   <div class="section-label">Contact</div>
-   <h2 class="section-title">You are welcome here.</h2>
-   <p class="section-intro">Come as you are. We would love to meet you and worship together.</p>
-   <div class="contact-box" style="margin-top:25px">
-    <div class="contact-row"><div class="icon">📍</div><div><strong>Location</strong><span>Anantapur, Andhra Pradesh, India</span></div></div>
-    <div class="contact-row"><div class="icon">📞</div><div><strong>Phone</strong><span>Contact Calvary Ministries</span></div></div>
-    <div class="contact-row"><div class="icon">📖</div><div><strong>John 3:16</strong><span>God's love and hope for every person.</span></div></div>
-    <div class="buttons"><a class="btn primary" href="tel:+919999999999">Call Us</a><a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=Calvary+Ministries+Anantapur" target="_blank" rel="noopener">Directions</a></div>
-   </div>
-  </div>
-  <iframe class="map" src="https://www.google.com/maps?q=Anantapur%2C%20Andhra%20Pradesh&output=embed" loading="lazy" allowfullscreen></iframe>
- </div>
-</section>
-</main>
+  <!-- About Pastor Section (With Image) -->
+  <section id="about" class="py-14 sm:py-20 px-4 max-w-5xl mx-auto">
+    <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-10 shadow-sm flex flex-col md:flex-row items-center gap-8">
+      <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 shadow-md border border-slate-200">
+        <!-- REPLACE 'images/pastor.jpg' WITH YOUR PASTOR IMAGE FILE PATH -->
+        <img src="images/pastor.jpg" alt="M. Daniel Venkatreddy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80'">
+      </div>
+      <div class="text-center md:text-left">
+        <span class="text-xs uppercase font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">దైవజనులు</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2 mb-2">ఎం. డానియల్ వెంకట్‌రెడ్డి</h2>
+        <p class="text-slate-500 text-sm font-medium mb-4">Founder & Senior Pastor, Calvary Ministries</p>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
+          దేవుని ప్రేమను, సువార్తను మరియు ఆయన శక్తిమంతమైన వాక్యాన్ని అనేకులకు అందించడానికి కల్వరి మినిస్ట్రీస్ పరిచర్య కొనసాగుతోంది.
+        </p>
+        <a href="https://wa.me/918790003501" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> పాస్టర్ గారితో మాట్లాడండి &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
 
-<footer>
- <div class="footer-inner">
-  <div>© 2026 <span class="gold">Calvary Ministries</span> • Anantapur</div>
-  <div>Jesus Christ • Faith • Hope • Love</div>
- </div>
-</footer>
+  <!-- Service Timings -->
+  <section id="services" class="py-10 sm:py-16 px-4 max-w-5xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ఆరాధన సమయాలు</h2>
+      <p class="text-slate-600 text-sm sm:text-base">ప్రతి ఆదివారం దేవుని సన్నిధిలో ఆరాధించడానికి మీరు ప్రేమతో ఆహ్వానించబడుతున్నారు.</p>
+    </div>
 
-<script>
-document.querySelectorAll('.links a').forEach(a => a.addEventListener('click', () => document.querySelector('.links').classList.remove('open')));
-</script>
+    <div class="max-w-md mx-auto">
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-500/20 shadow-md text-center">
+        <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 mx-auto mb-4">
+          <i data-lucide="calendar" class="w-7 h-7"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider font-semibold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">ప్రధాన ఆరాధన</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-3 mb-1">ప్రతి ఆదివారం (Every Sunday)</h3>
+        <p class="text-3xl sm:text-4xl font-extrabold text-amber-600 my-3">ఉదయం 09:30 AM</p>
+        <p class="text-slate-600 text-sm leading-relaxed">స్తుతి ఆరాధన మరియు జీవంగల దేవుని వాక్య పరిచర్య.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="py-14 sm:py-20 px-4 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ఫోటో గ్యాలరీ (Gallery)</h2>
+      <p class="text-slate-600 text-sm sm:text-base">సంఘ ఆరాధనలు మరియు ప్రత్యేక కూటముల దృశ్యాలు.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+      <!-- Photo 1 -->
+      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
+        <img src="images/church1.jpg" alt="Church Worship" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=600&q=80'">
+      </div>
+      <!-- Photo 2 -->
+      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
+        <img src="images/church2.jpg" alt="Church Prayer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=600&q=80'">
+      </div>
+      <!-- Photo 3 -->
+      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
+        <img src="images/church3.jpg" alt="Fellowship" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=600&q=80'">
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Section -->
+  <section id="sermons" class="bg-slate-900 text-white py-14 sm:py-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 text-red-400 text-sm font-semibold mb-2">
+        <i data-lucide="video" class="w-5 h-5"></i>
+        <span>ఆన్‌లైన్ పరిచర్య</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-3">యూట్యూబ్ ప్రసంగాలు & సందేశాలు</h2>
+      <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-xl mx-auto">మా యూట్యూబ్ ఛానల్ ద్వారా దేవుని వాక్య సందేశాలు మరియు ఆరాధన పాటలు వీక్షించండి.</p>
+      
+      <div class="bg-slate-800/80 border border-slate-700 p-6 sm:p-8 rounded-2xl max-w-xl mx-auto text-center shadow-xl">
+        <div class="w-16 h-16 bg-red-600/10 border border-red-500/30 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i data-lucide="youtube" class="w-8 h-8"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-1">Calvary Ministries Anantapur</h3>
+        <p class="text-slate-400 text-sm mb-6">@cmanantapur</p>
+        
+        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition shadow w-full sm:w-auto">
+          <i data-lucide="external-link" class="w-4 h-4"></i> ఛానల్‌ను సబ్‌స్క్రైబ్ చేయండి
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prayer Request / Contact -->
+  <section id="prayer" class="py-14 sm:py-20 px-4 max-w-4xl mx-auto">
+    <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm text-center">
+      <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="phone-call" class="w-7 h-7"></i>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ప్రార్థన సహాయం కొరకు సంప్రదించండి</h2>
+      <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mb-6">
+        మీ కుటుంబ, వ్యక్తిగత మరియు ఆరోగ్య సమస్యల కొరకు ప్రత్యేక ప్రార్థనల కొరకు మమ్మల్ని సంప్రదించండి.
+      </p>
+
+      <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono mb-8 tracking-wider">
+        +91 87900 03501
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl transition shadow">
+          <i data-lucide="message-circle" class="w-5 h-5"></i> వాట్సాప్‌లో మెసేజ్ చేయండి
+        </a>
+        <a href="tel:+918790003501" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl transition shadow">
+          <i data-lucide="phone" class="w-5 h-5"></i> డైరెక్ట్‌గా కాల్ చేయండి
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Address Section -->
+  <section id="location" class="py-12 bg-slate-100 px-4 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">మందిరం చిరునామా</h2>
+        <p class="text-slate-600 text-sm">కల్వరి మినిస్ట్రీస్ ప్రార్థనా మందిరానికి రండి</p>
+      </div>
+
+      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm text-center max-w-2xl mx-auto">
+        <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600 mx-auto mb-3">
+          <i data-lucide="map-pin" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2">కల్వరి మినిస్ట్రీస్ (Calvary Ministries)</h3>
+        <p class="text-slate-700 text-base leading-relaxed">
+          BJP కాలనీ, బోయికొట్టాల రోడ్,<br>
+          గుత్తి రోడ్ (Gooty Road),<br>
+          <span class="font-semibold text-slate-900">అనంతపురం, ఆంధ్రప్రదేశ్ - 515001.</span>
+        </p>
+        <div class="mt-6">
+          <a href="https://maps.google.com/?q=BJP+COLONY,+Boyikottal+Road,+Gooty+Road,+Anantapur,+Andhra+Pradesh+-+515001" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700">
+            <i data-lucide="navigation" class="w-4 h-4"></i> గూగుల్ మ్యాప్స్‌లో చూడండి
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-10 px-4 border-t border-slate-800 text-center text-sm">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="font-semibold text-slate-300">కల్వరి మినిస్ట్రీస్ - అనంతపురం</p>
+        <p class="text-xs text-slate-500 mt-0.5">© 2026 Calvary Ministries. All rights reserved.</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="p-2 bg-slate-800 rounded-lg hover:text-amber-400 transition" aria-label="YouTube">
+          <i data-lucide="youtube" class="w-5 h-5"></i>
+        </a>
+        <a href="https://wa.me/918790003501" target="_blank" class="p-2 bg-slate-800 rounded-lg hover:text-amber-400 transition" aria-label="WhatsApp">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu Toggle & Lucide Icons -->
+  <script>
+    lucide.createIcons();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
 </body>
 </html>
