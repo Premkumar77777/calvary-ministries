@@ -6,244 +6,260 @@
   <title>కల్వరి మినిస్ట్రీస్ - Calvary Ministries, Anantapur</title>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Font: Noto Sans Telugu -->
+  <!-- Google Fonts: Noto Sans Telugu & Cinzel for aesthetic headers -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     body {
       font-family: 'Noto Sans Telugu', sans-serif;
     }
+    .cinzel {
+      font-family: 'Cinzel', serif;
+    }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-orange-600 selection:text-white">
 
   <!-- Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 text-white">
+  <header class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-orange-500/20 text-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16 sm:h-20">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-3">
-          <span class="text-2xl sm:text-3xl text-amber-500 font-serif">✝</span>
+          <span class="text-2xl sm:text-3xl text-orange-500">✝</span>
           <div class="leading-tight">
             <span class="block text-base sm:text-lg font-bold tracking-wide text-white">కల్వరి మినిస్ట్రీస్</span>
-            <span class="block text-xs text-slate-400 font-sans tracking-wider uppercase">Calvary Ministries</span>
+            <span class="block text-xs text-orange-400 cinzel font-semibold tracking-wider">CALVARY MINISTRIES</span>
           </div>
         </a>
 
         <!-- Desktop Links -->
         <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-          <a href="#about" class="hover:text-amber-400 transition">పరిచయం</a>
-          <a href="#services" class="hover:text-amber-400 transition">ఆరాధన సమయాలు</a>
-          <a href="#gallery" class="hover:text-amber-400 transition">ఫోటో గ్యాలరీ</a>
-          <a href="#sermons" class="hover:text-amber-400 transition">సందేశాలు</a>
-          <a href="#location" class="hover:text-amber-400 transition">చిరునామా</a>
-          <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-xl transition shadow-sm">ప్రార్థన అభ్యర్థన</a>
+          <a href="#about" class="hover:text-orange-400 transition">పరిచయం</a>
+          <a href="#services" class="hover:text-orange-400 transition">ఆరాధన సమయాలు</a>
+          <a href="#poster" class="hover:text-orange-400 transition">ప్రత్యేక కూటములు</a>
+          <a href="#gallery" class="hover:text-orange-400 transition">ఫోటో గ్యాలరీ</a>
+          <a href="#location" class="hover:text-orange-400 transition">చిరునామా</a>
+          <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-slate-950 font-bold px-4 py-2 rounded-xl transition shadow-lg">ప్రార్థన అభ్యర్థన</a>
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg hover:bg-slate-800 text-slate-300 focus:outline-none">
+        <button id="menu-btn" aria-label="Toggle menu" class="md:hidden p-2 rounded-lg hover:bg-slate-900 text-slate-300 focus:outline-none">
           <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
 
       <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 py-4 space-y-3 px-2 text-base font-medium text-slate-300">
-        <a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">పరిచయం</a>
-        <a href="#services" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">ఆరాధన సమయాలు</a>
-        <a href="#gallery" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">ఫోటో గ్యాలరీ</a>
-        <a href="#sermons" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">సందేశాలు</a>
-        <a href="#location" class="block px-3 py-2 rounded-lg hover:bg-slate-800 hover:text-white transition">చిరునామా</a>
-        <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="block text-center bg-amber-500 text-slate-950 font-bold px-4 py-2.5 rounded-xl shadow mt-2">ప్రార్థన అభ్యర్థన (WhatsApp)</a>
+        <a href="#about" class="block px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition">పరిచయం</a>
+        <a href="#services" class="block px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition">ఆరాధన సమయాలు</a>
+        <a href="#poster" class="block px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition">ప్రత్యేక కూటములు</a>
+        <a href="#gallery" class="block px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition">ఫోటో గ్యాలరీ</a>
+        <a href="#location" class="block px-3 py-2 rounded-lg hover:bg-slate-900 hover:text-white transition">చిరునామా</a>
+        <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="block text-center bg-gradient-to-r from-amber-500 to-orange-600 text-slate-950 font-bold px-4 py-2.5 rounded-xl shadow mt-2">ప్రార్థన అభ్యర్థన (WhatsApp)</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative bg-slate-950 text-white py-16 sm:py-24 px-4 overflow-hidden border-b border-slate-800">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent"></div>
-    <div class="relative max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
-        <span>ప్రభువైన యేసుక్రీస్తు నామములో మీకు హృదయపూర్వక స్వాగతం</span>
+  <!-- Big Hero Section with Calvary 4u Aesthetic Background -->
+  <section class="relative min-h-[580px] sm:min-h-[640px] flex items-center justify-center overflow-hidden border-b border-orange-500/20">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img src="images/calvary_hero.jpg" alt="Calvary 4u - Faith, Fire, Renewal" class="w-full h-full object-cover object-center opacity-40 sm:opacity-50">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-slate-950/80"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto text-center px-4 py-16">
+      <div class="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-xs sm:text-sm font-semibold px-4 py-1.5 rounded-full mb-6 backdrop-blur-md">
+        <span>🔥 Faith • Fire • Renewal</span>
       </div>
       
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold leading-tight tracking-tight mb-4">
-        కల్వరి మినిస్ట్రీస్, అనంతపురం
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-400 to-red-500 mb-4 drop-shadow">
+        కల్వరి ప్రత్యక్షత
       </h1>
-      <p class="text-slate-300 text-base sm:text-xl font-medium mb-6">
-        దైవజనులు: <span class="text-amber-400 font-semibold">ఎం. డానియల్ వెంకట్‌రెడ్డి</span> (M. Daniel Venkatreddy)
+      <p class="text-lg sm:text-2xl font-bold text-slate-200 mb-3 tracking-wide">
+        కల్వరి మినిస్ట్రీస్, అనంతపురం
+      </p>
+      <p class="text-sm sm:text-lg text-slate-300 mb-6">
+        దైవజనులు: <span class="text-orange-400 font-bold">ఎం. డానియల్ వెంకట్‌రెడ్డి</span> (M. Daniel Venkatreddy)
       </p>
 
-      <blockquote class="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8 italic bg-slate-900/60 p-4 rounded-xl border border-slate-800/80">
-        "ప్రయాసపడి భారము మోసికొనుచున్న సమస్త జనులారా, నాయొద్దకు రండి; నేను మీకు విశ్రాంతి కలుగజేతును." — మత్తయి 11:28
+      <blockquote class="text-xs sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed mb-8 italic bg-slate-900/80 backdrop-blur-md p-4 rounded-xl border border-orange-500/20 shadow-xl">
+        "దేవునియొద్దకు రండి, అప్పుడాయన మీయొద్దకు వచ్చును..." — యాకోబు 4:8
       </blockquote>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#services" class="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg text-center flex items-center justify-center gap-2">
-          <i data-lucide="clock" class="w-5 h-5"></i> ఆరాధన సమయం
+        <a href="#services" class="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-slate-950 font-bold px-7 py-3.5 rounded-xl transition shadow-lg text-center flex items-center justify-center gap-2">
+          <i data-lucide="clock" class="w-5 h-5"></i> ఆరాధన సమయాలు
         </a>
         <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="w-full sm:w-auto bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-3.5 rounded-xl border border-red-500 transition text-center flex items-center justify-center gap-2 shadow-lg">
-          <i data-lucide="youtube" class="w-5 h-5"></i> యూట్యూబ్ ఛానల్
+          <i data-lucide="youtube" class="w-5 h-5"></i> యూట్యూబ్ లైవ్
         </a>
       </div>
     </div>
   </section>
 
-  <!-- About Pastor Section (With Image) -->
-  <section id="about" class="py-14 sm:py-20 px-4 max-w-5xl mx-auto">
-    <div class="bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-10 shadow-sm flex flex-col md:flex-row items-center gap-8">
-      <div class="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden bg-slate-100 flex-shrink-0 shadow-md border border-slate-200">
-        <!-- REPLACE 'images/pastor.jpg' WITH YOUR PASTOR IMAGE FILE PATH -->
-        <img src="images/pastor.jpg" alt="M. Daniel Venkatreddy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80'">
+  <!-- Pastor & About Section -->
+  <section id="about" class="py-14 sm:py-20 px-4 max-w-6xl mx-auto">
+    <div class="bg-slate-900/90 rounded-3xl border border-slate-800 p-6 sm:p-10 shadow-2xl flex flex-col md:flex-row items-center gap-8">
+      <div class="w-56 h-64 sm:w-64 sm:h-72 rounded-2xl overflow-hidden bg-slate-800 flex-shrink-0 shadow-lg border-2 border-orange-500/30">
+        <img src="images/pastor.jpg" alt="M. Daniel Venkatreddy" class="w-full h-full object-cover object-top">
       </div>
-      <div class="text-center md:text-left">
-        <span class="text-xs uppercase font-bold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">దైవజనులు</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2 mb-2">ఎం. డానియల్ వెంకట్‌రెడ్డి</h2>
-        <p class="text-slate-500 text-sm font-medium mb-4">Founder & Senior Pastor, Calvary Ministries</p>
-        <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-          దేవుని ప్రేమను, సువార్తను మరియు ఆయన శక్తిమంతమైన వాక్యాన్ని అనేకులకు అందించడానికి కల్వరి మినిస్ట్రీస్ పరిచర్య కొనసాగుతోంది.
+      <div class="text-center md:text-left flex-1">
+        <span class="text-xs uppercase font-bold text-orange-400 bg-orange-500/10 border border-orange-500/20 px-3 py-1 rounded-full">దైవజనులు</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white mt-3 mb-1">ఎం. డానియల్ వెంకట్‌రెడ్డి</h2>
+        <p class="text-orange-400 text-sm font-semibold mb-4">Founder & Senior Pastor, Calvary Ministries</p>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+          పరిశుద్ధాత్మ దేవుని శక్తితో మరియు ఆయన వాక్య ప్రత్యక్షతతో అనేకమంది జీవితాల్లో నూతన ఆత్మీయ ఉజ్జీవాన్ని తీసుకురావడానికి కల్వరి మినిస్ట్రీస్ సేవ చేస్తోంది.
         </p>
-        <a href="https://wa.me/918790003501" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700">
-          <i data-lucide="message-circle" class="w-4 h-4"></i> పాస్టర్ గారితో మాట్లాడండి &rarr;
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Timings -->
-  <section id="services" class="py-10 sm:py-16 px-4 max-w-5xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-10">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ఆరాధన సమయాలు</h2>
-      <p class="text-slate-600 text-sm sm:text-base">ప్రతి ఆదివారం దేవుని సన్నిధిలో ఆరాధించడానికి మీరు ప్రేమతో ఆహ్వానించబడుతున్నారు.</p>
-    </div>
-
-    <div class="max-w-md mx-auto">
-      <div class="bg-white p-6 sm:p-8 rounded-2xl border-2 border-amber-500/20 shadow-md text-center">
-        <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-600 mx-auto mb-4">
-          <i data-lucide="calendar" class="w-7 h-7"></i>
-        </div>
-        <span class="text-xs uppercase tracking-wider font-semibold text-amber-600 bg-amber-50 px-3 py-1 rounded-full">ప్రధాన ఆరాధన</span>
-        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 mt-3 mb-1">ప్రతి ఆదివారం (Every Sunday)</h3>
-        <p class="text-3xl sm:text-4xl font-extrabold text-amber-600 my-3">ఉదయం 09:30 AM</p>
-        <p class="text-slate-600 text-sm leading-relaxed">స్తుతి ఆరాధన మరియు జీవంగల దేవుని వాక్య పరిచర్య.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Photo Gallery Section -->
-  <section id="gallery" class="py-14 sm:py-20 px-4 max-w-6xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-12">
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ఫోటో గ్యాలరీ (Gallery)</h2>
-      <p class="text-slate-600 text-sm sm:text-base">సంఘ ఆరాధనలు మరియు ప్రత్యేక కూటముల దృశ్యాలు.</p>
-    </div>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
-      <!-- Photo 1 -->
-      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
-        <img src="images/church1.jpg" alt="Church Worship" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=600&q=80'">
-      </div>
-      <!-- Photo 2 -->
-      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
-        <img src="images/church2.jpg" alt="Church Prayer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=600&q=80'">
-      </div>
-      <!-- Photo 3 -->
-      <div class="group relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-slate-200 shadow-sm">
-        <img src="images/church3.jpg" alt="Fellowship" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1478147427282-58a87a120781?auto=format&fit=crop&w=600&q=80'">
-      </div>
-    </div>
-  </section>
-
-  <!-- YouTube Section -->
-  <section id="sermons" class="bg-slate-900 text-white py-14 sm:py-20 px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 text-red-400 text-sm font-semibold mb-2">
-        <i data-lucide="video" class="w-5 h-5"></i>
-        <span>ఆన్‌లైన్ పరిచర్య</span>
-      </div>
-      <h2 class="text-2xl sm:text-3xl font-bold mb-3">యూట్యూబ్ ప్రసంగాలు & సందేశాలు</h2>
-      <p class="text-slate-400 text-sm sm:text-base mb-8 max-w-xl mx-auto">మా యూట్యూబ్ ఛానల్ ద్వారా దేవుని వాక్య సందేశాలు మరియు ఆరాధన పాటలు వీక్షించండి.</p>
-      
-      <div class="bg-slate-800/80 border border-slate-700 p-6 sm:p-8 rounded-2xl max-w-xl mx-auto text-center shadow-xl">
-        <div class="w-16 h-16 bg-red-600/10 border border-red-500/30 text-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-          <i data-lucide="youtube" class="w-8 h-8"></i>
-        </div>
-        <h3 class="text-xl font-bold text-white mb-1">Calvary Ministries Anantapur</h3>
-        <p class="text-slate-400 text-sm mb-6">@cmanantapur</p>
-        
-        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-xl transition shadow w-full sm:w-auto">
-          <i data-lucide="external-link" class="w-4 h-4"></i> ఛానల్‌ను సబ్‌స్క్రైబ్ చేయండి
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Prayer Request / Contact -->
-  <section id="prayer" class="py-14 sm:py-20 px-4 max-w-4xl mx-auto">
-    <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-10 shadow-sm text-center">
-      <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-        <i data-lucide="phone-call" class="w-7 h-7"></i>
-      </div>
-      <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">ప్రార్థన సహాయం కొరకు సంప్రదించండి</h2>
-      <p class="text-slate-600 text-sm sm:text-base max-w-xl mx-auto mb-6">
-        మీ కుటుంబ, వ్యక్తిగత మరియు ఆరోగ్య సమస్యల కొరకు ప్రత్యేక ప్రార్థనల కొరకు మమ్మల్ని సంప్రదించండి.
-      </p>
-
-      <div class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono mb-8 tracking-wider">
-        +91 87900 03501
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://wa.me/918790003501?text=వందనములు,%20నాకు%20ప్రార్థన%20సహాయం%20కావాలి." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-xl transition shadow">
-          <i data-lucide="message-circle" class="w-5 h-5"></i> వాట్సాప్‌లో మెసేజ్ చేయండి
-        </a>
-        <a href="tel:+918790003501" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-900 text-white font-semibold px-6 py-3.5 rounded-xl transition shadow">
-          <i data-lucide="phone" class="w-5 h-5"></i> డైరెక్ట్‌గా కాల్ చేయండి
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Location & Address Section -->
-  <section id="location" class="py-12 bg-slate-100 px-4 border-t border-slate-200">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">మందిరం చిరునామా</h2>
-        <p class="text-slate-600 text-sm">కల్వరి మినిస్ట్రీస్ ప్రార్థనా మందిరానికి రండి</p>
-      </div>
-
-      <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm text-center max-w-2xl mx-auto">
-        <div class="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600 mx-auto mb-3">
-          <i data-lucide="map-pin" class="w-6 h-6"></i>
-        </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">కల్వరి మినిస్ట్రీస్ (Calvary Ministries)</h3>
-        <p class="text-slate-700 text-base leading-relaxed">
-          BJP కాలనీ, బోయికొట్టాల రోడ్,<br>
-          గుత్తి రోడ్ (Gooty Road),<br>
-          <span class="font-semibold text-slate-900">అనంతపురం, ఆంధ్రప్రదేశ్ - 515001.</span>
-        </p>
-        <div class="mt-6">
-          <a href="https://maps.google.com/?q=BJP+COLONY,+Boyikottal+Road,+Gooty+Road,+Anantapur,+Andhra+Pradesh+-+515001" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-amber-600 hover:text-amber-700">
-            <i data-lucide="navigation" class="w-4 h-4"></i> గూగుల్ మ్యాప్స్‌లో చూడండి
+        <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+          <a href="https://wa.me/918790003501" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 transition">
+            <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> వాట్సాప్‌లో మాట్లాడండి
+          </a>
+          <a href="tel:+918790003501" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white text-sm font-semibold px-5 py-2.5 rounded-xl border border-slate-700 transition">
+            <i data-lucide="phone" class="w-4 h-4 text-orange-400"></i> 8790003501
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Worship Poster Spotlight -->
+  <section id="poster" class="py-12 bg-slate-900/50 px-4 border-y border-slate-800/80">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">ప్రత్యేక ఉజ్జీవ ఆరాధన</h2>
+      <p class="text-slate-400 text-sm sm:text-base mb-8">Revival Worship • Come • Worship • Grow in His Presence</p>
+      
+      <div class="max-w-md mx-auto rounded-2xl overflow-hidden shadow-2xl border border-orange-500/30">
+        <img src="images/poster.png" alt="Calvary Ministries Revival Worship" class="w-full h-auto object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Timings -->
+  <section id="services" class="py-14 sm:py-20 px-4 max-w-5xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">ఆరాధన సమయాలు</h2>
+      <p class="text-slate-400 text-sm sm:text-base">దేవుని సన్నిధిలో ఆరాధించడానికి మీరు ప్రేమతో ఆహ్వానించబడుతున్నారు.</p>
+    </div>
+
+    <div class="max-w-md mx-auto">
+      <div class="bg-gradient-to-b from-slate-900 to-slate-900/80 p-6 sm:p-8 rounded-3xl border-2 border-orange-500/40 shadow-2xl text-center">
+        <div class="w-14 h-14 bg-orange-500/10 border border-orange-500/30 rounded-2xl flex items-center justify-center text-orange-400 mx-auto mb-4">
+          <i data-lucide="calendar" class="w-7 h-7"></i>
+        </div>
+        <span class="text-xs uppercase tracking-wider font-bold text-orange-400 bg-orange-500/10 px-3 py-1 rounded-full">ఆదివారపు ఆరాధన</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-white mt-3 mb-1">ప్రతి ఆదివారం (Every Sunday)</h3>
+        <p class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500 my-3">ఉదయం 09:30 AM</p>
+        <p class="text-slate-400 text-sm leading-relaxed">స్తుతి ఆరాధన మరియు జీవంగల దేవుని వాక్య పరిచర్య.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Church Photo Gallery -->
+  <section id="gallery" class="py-14 sm:py-20 px-4 max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">ఫోటో గ్యాలరీ</h2>
+      <p class="text-slate-400 text-sm sm:text-base">కల్వరి మినిస్ట్రీస్ ఆరాధనలు మరియు ప్రార్థన కూటములు</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-md aspect-video sm:aspect-auto sm:h-64">
+        <img src="images/worship1.jpg" alt="ప్రార్థన సహవాసం" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4">
+          <span class="text-sm font-semibold text-white">ప్రార్థన సహవాసం</span>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-md aspect-video sm:aspect-auto sm:h-64">
+        <img src="images/worship2.jpg" alt="ఆశీర్వాద ప్రార్థన" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4">
+          <span class="text-sm font-semibold text-white">సంఘ ఆశీర్వాద ప్రార్థన</span>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-md aspect-video sm:aspect-auto sm:h-64">
+        <img src="images/worship3.jpg" alt="వాక్య పరిచర్య" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4">
+          <span class="text-sm font-semibold text-white">వాక్య పరిచర్య</span>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-md aspect-video sm:aspect-auto sm:h-64">
+        <img src="images/worship4.jpg" alt="వాక్య పఠనం" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4">
+          <span class="text-sm font-semibold text-white">వాక్య పఠనం & సందేశం</span>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl overflow-hidden bg-slate-900 border border-slate-800 shadow-md aspect-video sm:aspect-auto sm:h-64 sm:col-span-2 lg:col-span-2">
+        <img src="images/worship5.jpg" alt="విజ్ఞాపన ప్రార్థన" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4">
+          <span class="text-sm font-semibold text-white">విజ్ఞాపన ప్రార్థన & ఆరాధన</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YouTube Channel Section -->
+  <section class="bg-slate-900/80 text-white py-14 sm:py-20 px-4 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="w-16 h-16 bg-red-600/10 border border-red-500/30 text-red-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="youtube" class="w-8 h-8"></i>
+      </div>
+      <h2 class="text-2xl sm:text-3xl font-bold mb-2">యూట్యూబ్ ప్రసంగాలు & సందేశాలు</h2>
+      <p class="text-slate-400 text-sm sm:text-base mb-6">Calvary Ministries Anantapur • @cmanantapur</p>
+      
+      <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold px-7 py-3.5 rounded-xl transition shadow-lg">
+        <i data-lucide="external-link" class="w-4 h-4"></i> ఛానల్‌ను వీక్షించండి & Subscribe చేసుకోండి
+      </a>
+    </div>
+  </section>
+
+  <!-- Location & Address Section -->
+  <section id="location" class="py-14 sm:py-20 px-4 max-w-4xl mx-auto">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">మందిరం చిరునామా</h2>
+      <p class="text-slate-400 text-sm">కల్వరి మినిస్ట్రీస్ ప్రార్థనా మందిరానికి రండి</p>
+    </div>
+
+    <div class="bg-slate-900 p-6 sm:p-8 rounded-3xl border border-slate-800 shadow-xl text-center max-w-2xl mx-auto">
+      <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mx-auto mb-3">
+        <i data-lucide="map-pin" class="w-6 h-6"></i>
+      </div>
+      <h3 class="text-lg font-bold text-white mb-2">కల్వరి మినిస్ట్రీస్ (Calvary Ministries)</h3>
+      <p class="text-slate-300 text-base leading-relaxed">
+        BJP కాలనీ, సోములదొడ్డి / బోయికొట్టాల రోడ్,<br>
+        గుత్తి రోడ్ (Gooty Road),<br>
+        <span class="font-bold text-orange-400">అనంతపురం, ఆంధ్రప్రదేశ్ - 515001.</span>
+      </p>
+      <div class="mt-6 flex flex-col sm:flex-row justify-center gap-3">
+        <a href="https://maps.google.com/?q=BJP+Colony,+Anantapur,+Andhra+Pradesh+515001" target="_blank" class="inline-flex items-center justify-center gap-2 text-sm font-bold bg-slate-800 hover:bg-slate-700 text-orange-400 px-5 py-3 rounded-xl border border-slate-700 transition">
+          <i data-lucide="navigation" class="w-4 h-4"></i> గూగుల్ మ్యాప్స్‌లో దారి చూడండి
+        </a>
+        <a href="tel:+918790003501" class="inline-flex items-center justify-center gap-2 text-sm font-bold bg-orange-500 hover:bg-orange-600 text-slate-950 px-5 py-3 rounded-xl transition">
+          <i data-lucide="phone" class="w-4 h-4"></i> ఫోన్: 8790003501
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-slate-950 text-slate-400 py-10 px-4 border-t border-slate-800 text-center text-sm">
+  <footer class="bg-slate-950 text-slate-500 py-10 px-4 border-t border-slate-900 text-center text-sm">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
-        <p class="font-semibold text-slate-300">కల్వరి మినిస్ట్రీస్ - అనంతపురం</p>
-        <p class="text-xs text-slate-500 mt-0.5">© 2026 Calvary Ministries. All rights reserved.</p>
+        <p class="font-semibold text-slate-400">కల్వరి మినిస్ట్రీస్ - అనంతపురం</p>
+        <p class="text-xs text-slate-600 mt-0.5">© 2026 Calvary Ministries. All rights reserved.</p>
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="p-2 bg-slate-800 rounded-lg hover:text-amber-400 transition" aria-label="YouTube">
+        <a href="https://youtube.com/@cmanantapur?si=rXYvo69Gj3NTWTW_" target="_blank" class="p-2 bg-slate-900 rounded-lg hover:text-orange-400 transition" aria-label="YouTube">
           <i data-lucide="youtube" class="w-5 h-5"></i>
         </a>
-        <a href="https://wa.me/918790003501" target="_blank" class="p-2 bg-slate-800 rounded-lg hover:text-amber-400 transition" aria-label="WhatsApp">
+        <a href="https://wa.me/918790003501" target="_blank" class="p-2 bg-slate-900 rounded-lg hover:text-orange-400 transition" aria-label="WhatsApp">
           <i data-lucide="message-circle" class="w-5 h-5"></i>
         </a>
       </div>
